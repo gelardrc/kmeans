@@ -15,7 +15,16 @@ Then use kmeans package
 
 > rosrun kmeans kmeans.py <number_of_agents>
 
+# Run a example
+
+> roslaunch kmeans example.launch
+
+If everythings goes right, you should see rviz like this : 
+
+![rviz](https://github.com/gelardrc/kmeans/blob/main/img/example.png)
+
 # To do list 
 
-> Get from robot_pose the actual pose of agents 
+- Get from robot_pose the actual pose of agents
+- Correct arg in example.launch 
 

@@ -148,7 +148,9 @@ if __name__ == "__main__":
         print("Use: rosrun ghybrid kmeans.py <number_of_agents>")
     else:
         agents = int(sys.argv[1])
+	rospy.loginfo("Numero de agentes".format(sys.argv[1]))
     try:
+	rospy.loginfo("Numero de agentes".format(sys.argv[1]))
         node = KMeansCoverage(agents)
         node.run()
     except rospy.ROSInterruptException:

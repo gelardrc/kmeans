@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find kmeans)/map/example.yaml"/>
+    <node name="kmeans" pkg="kmeans" type="kmeans.py" args=" 3"/>
+    <node name="rviz" pkg="rviz" type="rviz"/>
+</launch>

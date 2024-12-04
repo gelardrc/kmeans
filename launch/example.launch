@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <launch>
+    <arg name="n" default="3"/>
     <node name="map_server" pkg="map_server" type="map_server" args="$(find kmeans)/map/example.yaml"/>
-    <node name="kmeans" pkg="kmeans" type="kmeans.py" args=" 3"/>
-    <node name="rviz" pkg="rviz" type="rviz"/>
+    <node name="kmeans" pkg="kmeans" type="kmeans.py" args="$(arg n)" output="screen"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find kmeans)/rviz/example.rviz" required="true"/>
 </launch>

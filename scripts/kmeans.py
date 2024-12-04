@@ -144,8 +144,9 @@ class KMeansCoverage:
             rate.sleep()
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2 or len(sys.argv) > 2:
+    if len(sys.argv) < 2:
         print("Use: rosrun ghybrid kmeans.py <number_of_agents>")
+	rospy.loginfo("Numero de agentes".format(sys.argv[1]))
     else:
         agents = int(sys.argv[1])
 	rospy.loginfo("Numero de agentes".format(sys.argv[1]))
